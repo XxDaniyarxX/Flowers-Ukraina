@@ -1,0 +1,18 @@
+{
+  "currency": "Валюта",
+  "language": "Тил",
+  "city": "Шаар",
+  "bookmarks": "Белгилер",
+  "delivery": "Жеткирүү жана төлөө",
+  "contacts": "Байланыштар",
+  "login": "Кирүү",
+  "register": "Каттоо",
+  "catalog": "Каталог товаров",
+  "forum": "Форум",
+  "reviews": "Сын-пикирлер",
+  "promotions": "Акциялар",
+  "news": "Жаңылыктар",
+  "information": "Маалымат",
+  "search_by_category": "Категориялар боюнча издөө",
+  "search_by_product": "Товарлар боюнча издөө"
+}

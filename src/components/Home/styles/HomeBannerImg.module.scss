@@ -1,0 +1,55 @@
+.home-banner {
+  width: 1421px;
+  margin: 0 auto;
+
+  &__top {
+    display: flex;
+    gap: 31px;
+    height: 674px;
+  }
+
+  &__left img {
+    width: 697px;
+    height: 670px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  &__left img:hover {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
+    width: 697px;
+    height: 674px;
+
+    img {
+      width: 336px;
+      height: 321px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.05) rotate(3deg);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__bottom {
+    width: 1421px;
+    height: 220px;
+    margin: 50px auto;
+
+    img {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.05) rotate(3deg);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

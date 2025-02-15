@@ -1,0 +1,19 @@
+{
+    "currency": "Currency",
+    "language": "Language",
+    "city": "City",
+    "bookmarks": "Bookmarks",
+    "delivery": "Delivery and Payment",
+    "contacts": "Contacts",
+    "login": "Login",
+    "register": "Register",
+    "catalog": "Catalog",
+    "forum": "Forum",
+    "reviews": "Reviews",
+    "promotions": "Promotions",
+    "news": "News",
+    "information": "Information",
+    "search_by_category": "Search by category",
+    "search_by_product": "Search by product"
+  }
+ 

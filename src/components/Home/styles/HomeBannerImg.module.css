@@ -1,0 +1,48 @@
+.home-banner {
+  width: 1421px;
+  margin: 0 auto;
+}
+.home-banner__top {
+  display: flex;
+  gap: 31px;
+  height: 674px;
+}
+.home-banner__left img {
+  width: 697px;
+  height: 670px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.home-banner__left img:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.home-banner__right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+  width: 697px;
+  height: 674px;
+}
+.home-banner__right img {
+  width: 336px;
+  height: 321px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.home-banner__right img:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.home-banner__bottom {
+  width: 1421px;
+  height: 220px;
+  margin: 50px auto;
+}
+.home-banner__bottom img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.home-banner__bottom img:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=HomeBannerImg.module.css.map */

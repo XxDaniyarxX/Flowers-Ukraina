@@ -1,0 +1,18 @@
+{
+    "currency": "Валюта",
+    "language": "Язык",
+    "city": "Город",
+    "bookmarks": "Закладки",
+    "delivery": "Доставка и оплата",
+    "contacts": "Контакты",
+    "login": "Вход",
+    "register": "Регистрация",
+    "catalog": "Каталог товаров",
+    "forum": "Форум",
+    "reviews": "Отзывы",
+    "promotions": "Акции",
+    "news": "Новости",
+    "information": "Информация",
+    "search_by_category": "Поиск по категориям",
+    "search_by_product": "Поиск по товарам"
+}

@@ -1,0 +1,157 @@
+.header {
+  padding-top: 15px;
+  width: 1920px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #333333;
+
+  .header-container {
+    width: 1422px;
+    height: 23px;
+    display: flex;
+    margin: 0 auto;
+    gap: 97px;
+
+    .header-menu {
+      list-style: none;
+      width: 1110px;
+      display: flex;
+      gap: 63px;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        &.currency {
+          width: 115px;
+          height: 20px;
+          gap: 10px;
+
+          h4 {
+            color: white;
+
+            &.highlight {
+              color: #956D84;
+              display: flex;
+
+              img {
+                margin-left: 5px;
+                width: 7px;
+              }
+            }
+          }
+        }
+
+        &.language {
+          width: 82px;
+          height: 20px;
+          gap: 10px;
+
+          h4 {
+            color: white;
+
+            &.highlight {
+              color: #956D84;
+              display: flex;
+              select {
+                outline: none;
+              }
+
+              img {
+                margin-left: 5px;
+                width: 7px;
+              }
+            }
+          }
+        }
+
+        &.city {
+          width: 82px;
+          height: 20px;
+          gap: 10px;
+
+          h4 {
+            color: white;
+
+            &.highlight {
+              color: #956D84;
+              display: flex;
+
+              img {
+                margin-left: 5px;
+                width: 7px;
+              }
+            }
+          }
+        }
+
+        &.bookmarks {
+          width: 115px;
+          height: 21px;
+          gap: 20px;
+
+          img {
+            width: 18px;
+            height: 16px;
+          }
+
+          h4 {
+            color: #ffffff;
+            display: flex;
+          }
+        }
+
+        &.delivery {
+          width: 256px;
+          height: 20px;
+          gap: 20px;
+
+          img {
+            width: 22px;
+            height: 22px;
+          }
+
+          h4 {
+            color: #ffffff;
+            display: flex;
+          }
+        }
+
+        &.contacts {
+          width: 180px;
+          height: 20px;
+          gap: 20px;
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+
+          h4 {
+            color: #ffffff;
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .header-auth {
+      li {
+        width: 180px;
+        height: 20px;
+        display: flex;
+        gap: 20px;
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+
+        h4 {
+          color: #ffffff;
+          display: flex;
+        }
+      }
+    }
+  }
+}

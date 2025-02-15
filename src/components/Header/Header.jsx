@@ -1,0 +1,77 @@
+import React from 'react';
+import heart from '/heart.svg';
+import gruz from '/gruz.svg';
+import contact from '/contact.svg';
+import user from '/user.svg';
+import './Header.scss';
+import HomeUl from "../Home/HomeUl.jsx";
+import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+
+function Header() {
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
+    return (
+        <div style={{ width: "1920px", height: "250px", margin: '0 auto' }}>
+            <div className="header">
+                <div className="header-container">
+                    <ul className="header-menu">
+                        <li className="currency">
+                            <h4>{t('currency')}</h4>
+                            <h4 className="highlight">
+                                <select>
+                                    <option value="value1">Грн</option>
+                                    <option value="value2">Сом</option>
+                                    <option value="value3">Рубл</option>
+                                </select>
+                            </h4>
+                        </li>
+                        <li className="language">
+                            <h4>{t('language')}</h4>
+                            <h4 className="highlight">
+                                <select onChange={(e) => changeLanguage(e.target.value)}>
+                                    <option value="en">EN</option>
+                                    <option value="ru">RU</option>
+                                    <option value="kg">KG</option>
+                                </select>
+                            </h4>
+                        </li>
+                        <li className="city">
+                            <h4>{t('city')}</h4>
+                            <h4 className="highlight">
+                                Киев
+                            </h4>
+                        </li>
+                        <li className="bookmarks">
+                            <img src={heart} alt="" />
+                            <h4>{t('bookmarks')}</h4>
+                        </li>
+                        <li className="delivery">
+                            <img src={gruz} alt="" />
+                            <h4>{t('delivery')}</h4>
+                        </li>
+                        <li className="contacts">
+                            <img src={contact} alt="" />
+                            <h4>{t('contacts')}</h4>
+                        </li>
+                    </ul>
+
+                    <ul className="header-auth" style={{ paddingLeft: i18n.language === 'kg' ? '35px' : '' , marginLeft: i18n.language === 'en' ? '20px' : ''}}>
+                        <li>
+                            <img src={user} alt="" />
+                            <h4><Link style={{ color: "white", paddingRight: "5px" }} to='/login'>{t('login')}</Link> <span>|</span>  <Link style={{ color: "white", paddingLeft: "5px" }} to='/register'>{t('register')}</Link></h4>
+                        </li>
+                    </ul>
+
+                </div>
+                <HomeUl />
+            </div>
+        </div>
+    );
+}
+
+export default Header;

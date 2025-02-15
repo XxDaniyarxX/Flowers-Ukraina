@@ -1,0 +1,134 @@
+.header {
+  padding-top: 15px;
+  width: 1920px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #333333;
+}
+.header .header-container {
+  width: 1422px;
+  height: 23px;
+  display: flex;
+  margin: 0 auto;
+  gap: 175px;
+}
+.header .header-container .header-menu {
+  list-style: none;
+  width: 1110px;
+  display: flex;
+  gap: 63px;
+}
+.header .header-container .header-menu li {
+  display: flex;
+  align-items: center;
+}
+.header .header-container .header-menu li.currency {
+  width: 115px;
+  height: 18px;
+  gap: 10px;
+}
+.header .header-container .header-menu li.currency h4 {
+  color: white;
+}
+.header .header-container .header-menu li.currency h4.highlight {
+  color: #956D84;
+  display: flex;
+}
+.header .header-container .header-menu li.currency h4.highlight img {
+  padding-top: 10px;
+  margin-left: 5px;
+  width: 7px;
+}
+.header .header-container .header-menu li.language {
+  width: 82px;
+  height: 19px;
+  gap: 10px;
+}
+.header .header-container .header-menu li.language h4 {
+  color: white;
+}
+.header .header-container .header-menu li.language h4.highlight {
+  color: #956D84;
+  display: flex;
+}
+.header .header-container .header-menu li.language h4.highlight img {
+  padding-top: 5px;
+  margin-left: 5px;
+  width: 7px;
+}
+.header .header-container .header-menu li.city {
+  width: 82px;
+  height: 19px;
+  gap: 10px;
+}
+.header .header-container .header-menu li.city h4 {
+  color: white;
+}
+.header .header-container .header-menu li.city h4.highlight {
+  color: #956D84;
+  display: flex;
+}
+.header .header-container .header-menu li.city h4.highlight img {
+  padding-top: 7px;
+  margin-left: 5px;
+  width: 7px;
+}
+.header .header-container .header-menu li.bookmarks {
+  width: 115px;
+  height: 21px;
+  gap: 20px;
+}
+.header .header-container .header-menu li.bookmarks img {
+  width: 18px;
+  height: 16px;
+  padding-top: 5px;
+}
+.header .header-container .header-menu li.bookmarks h4 {
+  color: #ffffff;
+  display: flex;
+}
+.header .header-container .header-menu li.delivery {
+  width: 180px;
+  height: 23px;
+  gap: 20px;
+}
+.header .header-container .header-menu li.delivery img {
+  width: 22px;
+  height: 22px;
+  padding-top: 5px;
+}
+.header .header-container .header-menu li.delivery h4 {
+  color: #ffffff;
+  display: flex;
+}
+.header .header-container .header-menu li.contacts {
+  width: 180px;
+  height: 23px;
+  gap: 20px;
+}
+.header .header-container .header-menu li.contacts img {
+  width: 16px;
+  height: 16px;
+  padding-top: 5px;
+}
+.header .header-container .header-menu li.contacts h4 {
+  color: #ffffff;
+  display: flex;
+}
+.header .header-container .header-auth li {
+  width: 180px;
+  height: 23px;
+  display: flex;
+  gap: 20px;
+}
+.header .header-container .header-auth li img {
+  width: 16px;
+  height: 16px;
+  padding-top: 5px;
+}
+.header .header-container .header-auth li h4 {
+  color: #ffffff;
+  display: flex;
+}
+
+/*# sourceMappingURL=Header.css.map */
