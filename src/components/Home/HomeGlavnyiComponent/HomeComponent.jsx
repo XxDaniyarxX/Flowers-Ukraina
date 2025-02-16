@@ -26,7 +26,10 @@ function HomeComponent() {
 
     return (
         <div className="home-component">
-            <HomeFlowersAbsolute/>
+                <HomeFlowersAbsolute/>
+          <main style={{width: "1420px", margin: "0 auto"}}>
+    
+        
             <div className="content-wrapper">
                 <HomeBannerImg/>
             </div>
@@ -81,6 +84,9 @@ function HomeComponent() {
                     }
                 </div>
             </div>
+               
+          </main>
+
         </div>
     );
 }

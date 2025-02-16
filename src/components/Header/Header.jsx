@@ -7,9 +7,10 @@ import './Header.scss';
 import HomeUl from "../Home/HomeUl.jsx";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-
+import { useSelector } from 'react-redux';
 function Header() {
     const { t, i18n } = useTranslation();
+    const { heartCount } = useSelector((state) => state.heart)
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
@@ -18,8 +19,8 @@ function Header() {
     return (
         <div style={{ width: "1920px", height: "250px", margin: '0 auto' }}>
             <div className="header">
-                <div className="header-container">
-                    <ul className="header-menu">
+                <div className="header-container" style={{gap: i18n.language === 'en' ? '8px' : '97px'}}>
+                    <ul className="header-menu" style={{width: i18n.language === 'en' ? '1213px' : '1110px', gap: i18n.language === 'en' ? '76px' : '63px'}}>
                         <li className="currency">
                             <h4>{t('currency')}</h4>
                             <h4 className="highlight">
@@ -46,8 +47,13 @@ function Header() {
                                 Киев
                             </h4>
                         </li>
-                        <li className="bookmarks">
-                            <img src={heart} alt="" />
+                        <li className="bookmarks" style={{width: i18n.language === 'en' ? "150px" : "115px"}}>
+                            <div style={{width: "25px", height: "20px"}}>
+                            <img width={21} height={18} src={heart} alt="" />
+                            <div style={{width:"16px", height: "16px", backgroundColor: "white", opacity: "70%", borderRadius: "50%", position: "absolute", marginTop: "-20px", marginLeft: "13px"}}>
+                                 <h4 style={{color: "black", position: "absolute", fontSize: "12px", marginLeft: '4.4px'}}>{heartCount}</h4>
+                            </div>
+                            </div>
                             <h4>{t('bookmarks')}</h4>
                         </li>
                         <li className="delivery">

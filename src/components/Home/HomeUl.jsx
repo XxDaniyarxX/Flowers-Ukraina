@@ -1,3 +1,4 @@
+// filepath: /src/components/Home/HomeUl.jsx
 import React from 'react';
 import roza from '/roza.svg';
 import social from '/social.svg';
@@ -8,12 +9,21 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleHeart } from '../../Redux/HeartSlice/HeartSlice';
+
 function HomeUl() {
     const { t } = useTranslation();
     const [activeLink, setActiveLink] = useState(null);
+    const dispatch = useDispatch();
+    const { heartCount, hearts } = useSelector((state) => state.heart);
 
     const handleLinkClick = (link) => {
         setActiveLink(link);
+    };
+
+    const handleHeartClick = (id) => {
+        dispatch(toggleHeart(id));
     };
 
     return (
@@ -37,12 +47,19 @@ function HomeUl() {
                     </div>
                 </div>
                 <div className="contact-info">
-                    <img src={social} alt=""/>
-                    <h4 style={{fontSize: "12px", fontWeight: "bold"}}>+38 (067) 829 30 30</h4>
+                    <div style={{marginLeft: '15px'}}>
+                        <img src={social} alt=""/>
+                        <h4 style={{fontSize: "12px", fontWeight: "bold"}}>+38 (067) 829 30 30</h4>
+                    </div>
                     <div className='gg'>
-                        <img src={heartgg} alt=""/>
+                        <div style={{position: "relative"}} onClick={() => handleHeartClick('global')}>
+                            <img src={heartgg} alt="" style={{ cursor: 'pointer', backgroundColor: hearts['global'] ? '#956D84' : 'transparent' }} />
+                            <div style={{width: "16px", height: "16px", backgroundColor: "#956D84", position: "absolute", borderRadius: "50%", marginTop: "-36px", marginLeft: "23px"}}>
+                                <h4 style={{fontSize: "8px", color: "white", fontWeight: "bold", position: "absolute", marginLeft: "6px", marginTop: "-11px"}}>{heartCount}</h4>
+                            </div>
+                        </div>
                         <AiOutlineShoppingCart size={35} color={'#956D84'} />
-                        <h4>₴ 1 520</h4>
+                        <h4>₴ 1520</h4>
                     </div>
                 </div>
             </main>

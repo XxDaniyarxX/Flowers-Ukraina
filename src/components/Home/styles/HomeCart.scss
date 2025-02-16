@@ -8,23 +8,8 @@
 
     &:hover {
       box-shadow: 0 0 20px rgba(255, 69, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.8);
-      transform: translateY(-10px) rotate(5deg) scale(1.1);
+      transform: translateY(-10px) scale(1.1);
       background: linear-gradient(135deg, #e0eafc, #cfdef3);
-      animation: spinEffect 2s forwards;
-    }
-
-    @keyframes spinEffect {
-      0% {
-        background: linear-gradient(135deg, #e0eafc, #cfdef3);
-      }
-      50% {
-        background: linear-gradient(135deg, #e0eafc, #cfdef3 50%, #0000ff 50%);
-        transform: translateY(-10px) rotate(5deg) scale(1.1) rotate(180deg);
-      }
-      100% {
-        background: linear-gradient(135deg, #e0eafc, #cfdef3);
-        transform: translateY(-10px) rotate(5deg) scale(1.1) rotate(360deg);
-      }
     }
 
     .image-section {
@@ -83,7 +68,6 @@
         }
 
         .new-price {
-          text-decoration: line-through;
           color: #956D84;
           font-weight: bolder;
         }

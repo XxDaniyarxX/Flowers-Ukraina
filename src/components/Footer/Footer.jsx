@@ -15,10 +15,10 @@ export default function Footer() {
 
     return (
         <>
-              <div style={{width: "1400px", margin: "80px auto"}}>
+            <div style={{width: "1420px", margin: "80px auto"}}>
                 {!isLoaded && <SkeletMap />}
                 <iframe
-                    style={{width: "1420px", height: "650px", display: isLoaded ? 'block' : 'none'}}
+                    style={{width: "1420px", height: "650px", display: isLoaded ? 'block' : 'none', margin: "0 auto"}}
                     src="https://maps.google.com/maps?width=500&amp;height=650&amp;hl=en&amp;q=Bishkek+(Bishkek)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                     onLoad={handleIframeLoad}
                 >
@@ -78,9 +78,7 @@ export default function Footer() {
                             <h4 style={{fontWeight: 'bold', color: "white"}}>ДОПОЛНИТЕЛЬНО</h4>
                             <div style={{width: "219px", height: "128px", marginTop: "30px"}}>
                                 <p style={{fontWeight: "300", color: "white", paddingBottom: "11px"}}>ПОДАРОЧНЫЕ </p>
-
                                 <p style={{fontWeight: "300", color: "white", paddingBottom: "11px"}}>СЕРТИФИКАТЫ </p>
-
                                 <p style={{fontWeight: "300", color: "white", paddingBottom: "11px"}}>АКЦИИ</p>
                                 <p style={{fontWeight: "300", color: "white"}}>ЦВЕТЫ И ОФИС </p>
                             </div>
@@ -91,8 +89,7 @@ export default function Footer() {
                     </div>
                     <div style={{width: '1420px', display: 'flex', paddingTop: "30px"}}>
                         <div><h4 style={{color: "white", fontSize: "13px"}}>Copyright © 2021. Все права защищены</h4></div>
-                        <div><img style={{width: "650px", marginLeft: "475px"}} width={650} height={35} src={oplata}
-                                  alt=""/></div>
+                        <div><img style={{width: "650px", marginLeft: "475px"}} width={650} height={35} src={oplata}alt=""/></div>
                     </div>
                 </div>
             </div>
