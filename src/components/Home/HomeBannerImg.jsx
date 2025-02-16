@@ -41,12 +41,15 @@ function HomeBannerImg() {
                         )}
                     </div>
                     <div className={styles['home-banner__right']}>
-                        {!allImagesLoaded && <SkeletImages4 />}
-                        {data.slice(28, 32).map((item, index) => (
-                            <div key={index} style={{ display: allImagesLoaded ? 'block' : 'none' }}>
-                                <img src={item.imageUrl} alt="" onLoad={() => handleImageLoad(index)} />
-                            </div>
-                        ))}
+                        {loading === 'true' || !data.length ? (
+                            [...Array(4)].map((_, index) => <SkeletImages4 key={index} />)
+                        ) : (
+                            data.slice(28, 32).map((item, index) => (
+                                <div key={index} style={{ display: imagesLoaded[index] ? 'block' : 'none' }}>
+                                    <img src={item.imageUrl} alt="" onLoad={() => handleImageLoad(index)} />
+                                </div>
+                            ))
+                        )}
                     </div>
                 </div>
                 <div className={styles['home-banner__bottom']}>
