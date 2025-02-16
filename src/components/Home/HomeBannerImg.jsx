@@ -5,7 +5,7 @@ import { fetchFlowers } from '../../Redux/FlowersApi/FlowersSlice';
 import { useEffect, useState } from 'react';
 import Skelet1Img from '../Skeletons/Skelet1Img';
 import SkeletImages4 from '../Skeletons/SkeletImages4';
-
+import SkeletBanners3 from '../Skeletons/SkeletBanners3'
 function HomeBannerImg() {
     const dispatch = useDispatch();
     const { loading, data } = useSelector((state) => state.flowers);
@@ -53,7 +53,17 @@ function HomeBannerImg() {
                     </div>
                 </div>
                 <div className={styles['home-banner__bottom']}>
-                    <img src={img_5} alt="" />
+                  {
+                    loading === 'true' ? (
+                        [...Array(3)].map((_, index) => <SkeletBanners3 key={index} />)
+                    ) : (
+                        data.slice(32, 35).map((item) => (
+                            <div key={item.id}>
+                                <img src={item.imageUrl} alt="" />
+                            </div>
+                        ))
+                    )
+                  }
                 </div>
             </div>
         </div>

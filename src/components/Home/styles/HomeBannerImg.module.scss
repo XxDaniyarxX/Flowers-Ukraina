@@ -42,7 +42,8 @@
     width: 1421px;
     height: 220px;
     margin: 50px auto;
-
+    display: flex;
+    gap: 20px;
     img {
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
