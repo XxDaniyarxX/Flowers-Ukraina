@@ -1,0 +1,37 @@
+$bgc-color: #007bff;
+$bgc-color-hover: #0056b3;
+$text-color: white;
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        padding: 10px;
+        background: $bgc-color;
+        color: $text-color;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        
+        &:hover {
+            background: $bgc-color-hover;
+        }
+    }
+}
