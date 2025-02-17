@@ -68,7 +68,7 @@ function Header() {
 
                     <ul className="header-auth" style={{ paddingLeft: i18n.language === 'kg' ? '35px' : '' , marginLeft: i18n.language === 'en' ? '20px' : ''}}>
                         <li>
-                            <img src={user} alt="" />
+                            <Link to={'profile'}><img src={user} alt="" /></Link>
                             <h4><Link style={{ color: "white", paddingRight: "5px" }} to='/login'>{t('login')}</Link> <span>|</span>  <Link style={{ color: "white", paddingLeft: "5px" }} to='/register'>{t('register')}</Link></h4>
                         </li>
                     </ul>

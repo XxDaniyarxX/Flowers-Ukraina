@@ -7,6 +7,7 @@ import Reviews from "./pages/Reviews.jsx";
 import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import Forum from "./pages/Forum.jsx";
+import Profile from './pages/Profile.jsx';
 
 
 
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
             {
                 path: 'forum',
                 element: <Forum />
+            },
+            {
+                path: 'profile',
+                element: <Profile />
             },
 
         ]
