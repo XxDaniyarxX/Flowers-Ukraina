@@ -1,114 +1,142 @@
+@keyframes borderAnimation {
+  0% {
+    border-color: red;
+  }
+  50% {
+    border-color: blue;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
 .home-cart {
   .cart-container {
+    position: relative;
     width: 340px;
     height: 544px;
     border: 1px solid #956D84;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    overflow: hidden;
+    animation: borderAnimation 3s infinite linear;
+  }
 
-    &:hover {
-      box-shadow: 0 0 20px rgba(255, 69, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.8);
-      transform: translateY(-10px) scale(1.1);
-      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  .image-section {
+    width: 100%;
+    height: 290px;
+    background-color: #FBF9FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .discount {
+      width: 56px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
     }
 
-    .image-section {
-      width: 100%;
-      height: 290px;
-      background-color: #FBF9FA;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-
-      .discount {
-        width: 56px;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-      }
-
-      .main-image {
-        width: 260px;
-      }
-
-      .thumbnail {
-        width: 56px;
-        border-radius: 30px;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-      }
+    .main-image {
+      width: 260px;
     }
 
-    .star {
-      margin: 16px 26px;
-      width: 74px;
-    }
-
-    .details {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 13px;
-
-      .title {
-        font-size: 18px;
-        font-weight: normal;
-        width: 150px;
-      }
-
-      .price {
-        text-align: right;
-
-        .old-price {
-          text-decoration: line-through;
-          color: #BDBDBD;
-          font-weight: normal;
-        }
-
-        .new-price {
-          color: #956D84;
-          font-weight: bolder;
-        }
-      }
-    }
-
-    .order-button {
-      position: relative;
-      width: 220px;
-      height: 65px;
-      background-color: #956D84;
-      border-radius: 7px;
-      margin: 0px auto;
-      margin-top: 20px;
-      font-weight: bold;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.2s ease;
-
-      &:hover {
-        background-color: #7a4f6a;
-      }
-
-      .button-icon {
-        position: absolute;
-        right: 10px;
-        width: 88px;
-      }
-    }
-
-    .quick-order {
-      text-decoration: underline;
-      color: #828282;
-      text-align: center;
-      padding-top: 10px;
-      font-weight: normal;
-      padding-bottom: 5px;
+    .thumbnail {
+      width: 56px;
+      border-radius: 30px;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
     }
   }
 
+  .star {
+    margin: 16px 26px;
+    width: 74px;
+  }
+
+  .details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 13px;
+
+    .title {
+      font-size: 18px;
+      font-weight: normal;
+      width: 150px;
+    }
+
+    .price {
+      text-align: right;
+
+      .old-price {
+        text-decoration: line-through;
+        color: #BDBDBD;
+        font-weight: normal;
+      }
+
+      .new-price {
+        color: #956D84;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .order-button {
+    position: relative;
+    width: 220px;
+    height: 65px;
+    background-color: #956D84;
+    border-radius: 7px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background-color: #7a4f6a;
+    }
+
+    .button-icon {
+      position: absolute;
+      right: 10px;
+      width: 88px;
+    }
+  }
+
+  .quick-order {
+    text-decoration: underline;
+    color: #828282;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: normal;
+    padding-bottom: 5px;
+  }
+
+  // Сердечко (избранное)
+  .heart-container {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20; // Увеличил, чтобы не перекрывалось другими элементами
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+  }
+
+  .heart-icon {
+    width: 32px;
+    height: 32px;
+  }
 }

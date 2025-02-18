@@ -5,41 +5,46 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleHeart } from '../../Redux/HeartSlice/HeartSlice';
 import heartpurple from '/heartpurple.svg';
 
-
 function HomeCarts({ flower }) {
     const dispatch = useDispatch();
     const { hearts } = useSelector((state) => state.heart);
     const isHeartActive = hearts[flower.id] || false;
 
-    const handleHeartClick = () => {
+   
+    const handleFavoriteClick = (event) => {
+        event.preventDefault();
+        event.stopPropagation(); 
         dispatch(toggleHeart(flower.id));
     };
+    
 
     return (
         <div className="home-cart">
             <div className="cart-container">
                 <div className="image-section">
                     <img className="discount" src={flower.discount_19} alt="" />
+
+                  
                     <div
-                        style={{
-                            marginLeft: "270px",
-                            position: "absolute",
-                            marginBottom: "195px",
-                            cursor: 'pointer',
-                            border: `0px solid ${isHeartActive ? '#956D84' : 'transparent'}`,
-                            padding: '5px'
+                        className="heart-container"
+                        onClick={(event) => {
+                            event.stopPropagation(); // Остановить всплытие
+                            handleFavoriteClick(event);
                         }}
-                        onClick={handleHeartClick}
                     >
                         {isHeartActive ? (
-                            <img src={heartpurple} alt="Heart" style={{ width: '40px', height: '40px' }} />
+                            <img src={heartpurple} alt="Heart" className="heart-icon" />
                         ) : (
                             <AiOutlineHeart size={40} color='#956D84' />
                         )}
                     </div>
+
+
+
                     <img className="main-image" src={flower.imageUrl} alt="" />
                     <img className="thumbnail" src={flower.thumbnail} alt="" />
                 </div>
+
                 <img className="star" src={flower.star} alt="" />
                 <div className="details">
                     <h4 className="title">{flower.title}</h4>

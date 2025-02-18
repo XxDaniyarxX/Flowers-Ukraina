@@ -1,11 +1,12 @@
 import styles from './styles/HomeBannerImg.module.scss';
-import img_5 from '/img_5.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchFlowers } from '../../Redux/FlowersApi/FlowersSlice';
 import { useEffect, useState } from 'react';
 import Skelet1Img from '../Skeletons/Skelet1Img';
 import SkeletImages4 from '../Skeletons/SkeletImages4';
-import SkeletBanners3 from '../Skeletons/SkeletBanners3'
+import SkeletBanners3 from '../Skeletons/SkeletBanners3';
+import { Link } from 'react-router-dom';
+
 function HomeBannerImg() {
     const dispatch = useDispatch();
     const { loading, data } = useSelector((state) => state.flowers);
@@ -23,6 +24,10 @@ function HomeBannerImg() {
             return newImagesLoaded;
         });
     };
+
+    const item1 = data[32];
+    const item2 = data[33];
+    const item3 = data[34];
 
     const allImagesLoaded = imagesLoaded.every((loaded) => loaded);
 
@@ -53,17 +58,33 @@ function HomeBannerImg() {
                     </div>
                 </div>
                 <div className={styles['home-banner__bottom']}>
-                  {
-                    loading === 'true' ? (
+                    {loading === 'true' || !data.length ? (
                         [...Array(3)].map((_, index) => <SkeletBanners3 key={index} />)
                     ) : (
-                        data.slice(32, 35).map((item) => (
-                            <div key={item.id}>
-                                <img src={item.imageUrl} alt="" />
-                            </div>
-                        ))
-                    )
-                  }
+                        <div style={{ display: 'flex', gap: '10px' }}>
+                            {item1 && (
+                                <div>
+                                    <Link to={`/fotodostavki`}>
+                                        <img width={460} src={item1.imageUrl} alt="" />
+                                    </Link>
+                                </div>
+                            )}
+                            {item2 && (
+                                <div>
+                                    <Link to={`/videootchet`}>
+                                        <img width={460} src={item2.imageUrl} alt="" />
+                                    </Link>
+                                </div>
+                            )}
+                            {item3 && (
+                                <div>
+                                    <Link to={`/giftclients`}>
+                                        <img width={460} src={item3.imageUrl} alt="" />
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
