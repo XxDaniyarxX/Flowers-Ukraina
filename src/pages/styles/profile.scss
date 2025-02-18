@@ -1,0 +1,111 @@
+$primary-color: #007bff;
+$primary-hover: #0056b3;
+$text-color: #ffffff;
+$bg-color: rgba(255, 255, 255, 0.9);
+$shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-card {
+  background: $bg-color;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: $shadow;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s;
+  }
+
+  .avatar-upload {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: $primary-color;
+    color: $text-color;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: $primary-hover;
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+.username {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.profile-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+
+  &:disabled {
+    background: #e0e0e0;
+  }
+}
+
+.edit-btn {
+  width: 100%;
+  padding: 12px;
+  background: $primary-color;
+  color: $text-color;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+
+  &:hover {
+    background: $primary-hover;
+    transform: scale(1.05);
+  }
+}

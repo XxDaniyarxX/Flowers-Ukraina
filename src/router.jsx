@@ -46,6 +46,22 @@ export const router = createBrowserRouter([
                 path: 'forum',
                 element: <Forum />
             },
+            {
+                path: 'profile',
+                element: <Profile />
+            },
+            {
+                path: 'fotodostavki',
+                element: <FotoDostavki />
+            },
+            {
+                path: "videootchet",
+                element: <VideoOtchet />
+            },
+            {
+                path: "giftclients",
+                element: <GiftClient />
+            }
 
         ]
     }

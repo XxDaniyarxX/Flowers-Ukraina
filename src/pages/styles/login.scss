@@ -1,0 +1,98 @@
+$bgc-color: linear-gradient(135deg, #007bff, #0056b3);
+$bgc-color-hover: linear-gradient(135deg, #0056b3, #004494);
+$text-color: white;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+    backdrop-filter: blur(10px);
+
+    h2 {
+        margin-bottom: 15px;
+        color: #333;
+        font-size: 26px;
+        font-weight: bold;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .input-group {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+
+        .icon {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        input {
+            flex: 1;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            background: none;
+        }
+
+        .toggle-password {
+            cursor: pointer;
+            color: #007bff;
+            transition: 0.3s;
+
+            &:hover {
+                color: #0056b3;
+            }
+        }
+    }
+
+    button {
+        padding: 12px;
+        background: $bgc-color;
+        color: $text-color;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 0.3s;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            background: $bgc-color-hover;
+            animation: pulse 0.5s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
